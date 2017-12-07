@@ -14,7 +14,7 @@
               </a>
             </li>
             <li class="nav-item <?php echo preg_match("/^terminal/",$_REQUEST['pn'])?'active':'';?>">
-              <a class="nav-link" href="http://<?php echo preg_replace("/:\d+/",":8080",$_SERVER['HTTP_HOST']);?>/ssh/host/127.0.0.1" target="_blank">
+              <a class="nav-link" href="http://<?php echo preg_replace("/:\d+/",":8080",$_SERVER['HTTP_HOST']);?>/ssh/host/<?php echo $_SERVER['SERVER_ADDR'];?>" target="_blank">
                 <i class="fa fa-terminal" aria-hidden="true"></i>
                 Terminal Session
               </a>
